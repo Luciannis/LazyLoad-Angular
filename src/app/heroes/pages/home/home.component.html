@@ -18,13 +18,13 @@
                 <mat-icon mat-list-icon>label</mat-icon>
                 <span> Listado de Heroes </span>
             </a>
-            <a routerLink="./listado"
+            <a routerLink="./agregar"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>add</mat-icon>
                 <span> Añadir Heroe </span>
             </a>
-            <a routerLink="./listado"
+            <a routerLink="./buscar"
                 mat-list-item
                 (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>search</mat-icon>
@@ -40,8 +40,9 @@
         </button>
 
         <span class="spacer"></span>
+        <span>{{auth.usuario}}</span>
 
-        <button mat-button>
+        <button mat-button (click)="logout()">
             Logout
         </button>
 
